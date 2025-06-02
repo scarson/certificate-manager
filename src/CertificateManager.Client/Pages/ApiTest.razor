@@ -1,0 +1,73 @@
+@page "/api-test"
+@inject ICertificateService CertificateService
+@inject ILogger<ApiTest> Logger
+
+<PageTitle>API Test</PageTitle>
+
+<h1>API Connection Test</h1>
+
+
+@if (isLoading)
+{
+    <div class="alert alert-info">
+        <div class="spinner-border spinner-border-sm me-2" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        Testing API connection...
+    </div>
+}
+else if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        <h4>Error connecting to API</h4>
+        <p>@errorMessage</p>
+        <button class="btn btn-outline-danger" @onclick="TestApiConnection">
+            <i class="bi bi-arrow-clockwise"></i> Try Again
+        </button>
+    </div>
+}
+else
+{
+    <div class="alert alert-success">
+        <h4>API Connection Successful!</h4>
+        <p>Message from API: <strong>@apiMessage</strong></p>
+        <button class="btn btn-outline-success" @onclick="TestApiConnection">
+            <i class="bi bi-arrow-clockwise"></i> Test Again
+        </button>
+    </div>
+}
+
+@code {
+    private bool isLoading = true;
+    private string? errorMessage;
+    private string apiMessage = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await TestApiConnection();
+    }
+
+    private async Task TestApiConnection()
+    {
+        isLoading = true;
+        errorMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            // This will call our test endpoint
+            var response = await CertificateService.GetTestMessageAsync();
+            apiMessage = response;
+        }
+        catch (Exception ex)
+        {
+            errorMessage = $"Error: {ex.Message}";
+            Logger.LogError(ex, "API connection test failed");
+        }
+        finally
+        {
+            isLoading = false;
+            StateHasChanged();
+        }
+    }
+}
