@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\CertificateManager.Client\\CertificateManager.Client.csproj": {}
+    "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\CertificateManager.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\CertificateManager.Client\\CertificateManager.Client.csproj": {
+    "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\CertificateManager.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\CertificateManager.Client\\CertificateManager.Client.csproj",
+        "projectUniqueName": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\CertificateManager.Client.csproj",
         "projectName": "CertificateManager.Client",
-        "projectPath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\CertificateManager.Client\\CertificateManager.Client.csproj",
+        "projectPath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\CertificateManager.Client.csproj",
         "packagesPath": "C:\\Users\\Sam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\CertificateManager.Client\\obj\\",
+        "outputPath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sam\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,8 +44,16 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
