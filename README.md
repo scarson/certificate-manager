@@ -1,5 +1,5 @@
 # certificate-manager
-A web app to track X.509 certificates and send expiration and renewal reminders. A learning project for ASP.NET, Angular, and AI-assisted coding.
+A web app to track X.509 certificates and send expiration and renewal reminders. A learning project for ASP.NET Core, Angular, and AI-assisted coding.
 
 The app should be cross-platform and run on Windows or Linux. It should be easy to containerize.
 
