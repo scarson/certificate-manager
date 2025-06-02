@@ -18,8 +18,30 @@ public class CertificateService : ICertificateService
     {
         try
         {
-            var response = await _httpClient.GetFromJsonAsync<JsonElement>("api/certificates/test");
-            return response.GetProperty("Message").GetString() ?? "No message received";
+            var response = await _httpClient.GetAsync("api/certificates/test");
+            
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                if (!string.IsNullOrEmpty(content))
+                {
+                    var json = JsonDocument.Parse(content).RootElement;
+                    if (json.TryGetProperty("Message", out var messageProp) && 
+                        messageProp.ValueKind == JsonValueKind.String)
+                    {
+                        return messageProp.GetString() ?? "No message content";
+                    }
+                    // Fallback to raw content if message property not found
+                    return content;
+                }
+                return "Empty response from server";
+            }
+            return $"Error: {response.StatusCode} - {response.ReasonPhrase}";
+        }
+        catch (HttpRequestException httpEx)
+        {
+            _logger.LogError(httpEx, "HTTP Request error");
+            return $"Network error: {httpEx.Message}";
         }
         catch (Exception ex)
         {

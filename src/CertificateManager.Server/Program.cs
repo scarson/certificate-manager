@@ -21,11 +21,12 @@ var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(';', StringS
 
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowBlazorClient", policy =>
     {
         policy.WithOrigins(allowedOrigins)
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .AllowCredentials();
     });
 });
 
@@ -44,13 +45,18 @@ else
     app.UseHsts();
 }
 
-app.UseHttpsRedirection();
+// Use HTTPS redirection in production only
+if (!app.Environment.IsDevelopment())
+{
+    app.UseHttpsRedirection();
+}
+
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseCors();
+app.UseCors("AllowBlazorClient");
 
 app.MapRazorPages();
 app.MapControllers();
