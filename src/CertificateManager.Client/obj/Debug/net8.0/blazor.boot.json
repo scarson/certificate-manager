@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CertificateManager.Client",
   "resources": {
-    "hash": "sha256-ohOv4gudyWRFEFCpER0UjzPawzWqhaaslPlu4Aa4U6I=",
+    "hash": "sha256-8izgJJVUDICywoYpEPjxZA3MN4zw/H0Kffh/afNCOrA=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.8t7cqcd8on.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -214,10 +214,10 @@
       "mscorlib.wasm": "sha256-cDuLeL3OCtVtiid/dyex1MVgbuzDSRwZxKzuP2Dp4mg=",
       "netstandard.wasm": "sha256-A0h86SDieTMoU/wU2JTszWCsUmMuguDcbap0b0BzsmI=",
       "System.Private.CoreLib.wasm": "sha256-/0DNIm/T0C07X7Tuz5uR8JvVCoAfEE2MnfPUSjyS9xc=",
-      "CertificateManager.Client.wasm": "sha256-WB/DGfG2mSbrRNhq2rtN4FZ0cQwhHiaSsvDsEOK59fI="
+      "CertificateManager.Client.wasm": "sha256-Conqsw1I1Y06K8GEVOurUw9tUHw+Wz3DsQfXwUkj23Y="
     },
     "pdb": {
-      "CertificateManager.Client.pdb": "sha256-l9ruDYfXs3X7zbXw4Yu/fnbUxBGxwvemtJcY3sfBK5c="
+      "CertificateManager.Client.pdb": "sha256-FwLhl2/BxNsNjsmGzGO1iEW+qtJzNpWSgQGrALB4H84="
     }
   },
   "cacheBootResources": true,
