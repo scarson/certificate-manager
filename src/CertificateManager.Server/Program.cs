@@ -22,6 +22,18 @@ builder.Services.AddAuthorization(); // Ensure authorization services are regist
 builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
+// Add CORS policy for Blazor client (existing)
+// NOTE: The "PermissivePlaceholderCors" policy below is added for development convenience and MUST be reviewed and secured for production.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermissivePlaceholderCors", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 // Add CORS policy for Blazor client
 var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(';', StringSplitOptions.RemoveEmptyEntries) 
     ?? new[] { "https://localhost:5001", "http://localhost:5000" };
@@ -57,12 +69,36 @@ if (!app.Environment.IsDevelopment())
     app.UseHttpsRedirection();
 }
 
+// NOTE: Security headers below are placeholders and/or permissive for development.
+// MUST be reviewed and configured securely for production.
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Append("X-Content-Type-Options", "nosniff");
+    context.Response.Headers.Append("X-Frame-Options", "DENY"); // Consider SAMEORIGIN if framing is needed from the same origin
+    context.Response.Headers.Append("Referrer-Policy", "strict-origin-when-cross-origin"); // A common reasonable default
+    // Extremely permissive CSP for development. REVIEW AND HARDEN FOR PRODUCTION.
+    // Example: "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';"
+    context.Response.Headers.Append("Content-Security-Policy", 
+        "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:; " + // blob: might be needed for Blazor WASM debugging
+        "script-src * 'unsafe-inline' 'unsafe-eval'; " +
+        "style-src * 'unsafe-inline'; " +
+        "img-src * data: blob:; " +
+        "font-src * data:; " +
+        "object-src 'none'; " +
+        "frame-ancestors 'none';"); // Deny framing by default
+    // Permissions-Policy: Deny common sensitive features by default. Adjust as needed.
+    context.Response.Headers.Append("Permissions-Policy", "geolocation=(), microphone=(), camera=(), payment=(), usb=(), accelerometer=(), gyroscope=(), magnetometer=()");
+    await next();
+});
+
+
 app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseCors("AllowBlazorClient");
+// app.UseCors("AllowBlazorClient"); // Temporarily replaced by PermissivePlaceholderCors for review
+app.UseCors("PermissivePlaceholderCors"); // NOTE: Using highly permissive CORS policy. MUST be secured for production.
 
 app.UseAuthentication(); // Must be before UseAuthorization
 app.UseAuthorization();
