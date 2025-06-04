@@ -9,26 +9,61 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateManager.Server",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateManager.Client", "src\CertificateManager.Client\CertificateManager.Client.csproj", "{6EE9B8DB-5029-412B-AA2B-80315294FE50}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CertificateManager.Shared", "src\CertificateManager.Shared\CertificateManager.Shared.csproj", "{3CDE2211-6FD3-493B-9512-8AA0780EB17D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|x64.Build.0 = Debug|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Debug|x86.Build.0 = Debug|Any CPU
 		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|x64.ActiveCfg = Release|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|x64.Build.0 = Release|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|x86.ActiveCfg = Release|Any CPU
+		{B265B9E9-DBCB-46EF-9548-831A077DB077}.Release|x86.Build.0 = Release|Any CPU
 		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|x64.Build.0 = Debug|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Debug|x86.Build.0 = Debug|Any CPU
 		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|x64.ActiveCfg = Release|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|x64.Build.0 = Release|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|x86.ActiveCfg = Release|Any CPU
+		{6EE9B8DB-5029-412B-AA2B-80315294FE50}.Release|x86.Build.0 = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|x64.Build.0 = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Debug|x86.Build.0 = Debug|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|x64.ActiveCfg = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|x64.Build.0 = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|x86.ActiveCfg = Release|Any CPU
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B265B9E9-DBCB-46EF-9548-831A077DB077} = {E1F0300B-91EC-450C-9146-079D7783E547}
 		{6EE9B8DB-5029-412B-AA2B-80315294FE50} = {E1F0300B-91EC-450C-9146-079D7783E547}
+		{3CDE2211-6FD3-493B-9512-8AA0780EB17D} = {E1F0300B-91EC-450C-9146-079D7783E547}
 	EndGlobalSection
 EndGlobal

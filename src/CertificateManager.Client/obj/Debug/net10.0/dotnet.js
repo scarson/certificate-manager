@@ -4,7 +4,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "CertificateManager.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-a2sVkEk5bVMmIUllKSADkxv5DdLodW0ScXkQdYZcicc=",
+    "hash": "sha256-0TKtvR38yQ3ZAYXnACeT0V1HkJOkoWrO//F0L2/JyGY=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Authorization.xzblanle4u.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.yl5qce0m75.wasm": "Microsoft.AspNetCore.Components.wasm",
@@ -211,8 +211,10 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "CertificateManager.Client.xatjn9f1vr.wasm": "CertificateManager.Client.wasm",
-      "CertificateManager.Client.94mntzuoez.pdb": "CertificateManager.Client.pdb"
+      "CertificateManager.Shared.fms2f1et3y.wasm": "CertificateManager.Shared.wasm",
+      "CertificateManager.Shared.uo3hbbn5f0.pdb": "CertificateManager.Shared.pdb",
+      "CertificateManager.Client.t7z8tlgkk0.wasm": "CertificateManager.Client.wasm",
+      "CertificateManager.Client.pe9bmu31qf.pdb": "CertificateManager.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.ag7edw449v.js": "sha256-xvVp/fZ4Y6bUzf5qhusfIdl1iBnAHjDV8xQ/ELYPXMs="
@@ -430,10 +432,12 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "WindowsBase.x8kacodv3x.wasm": "sha256-AQFfd/tAEfdj9Zda1OnOLMOi8x3xF3D0DL3fmA9FeP4=",
       "mscorlib.vqgsl7wzlm.wasm": "sha256-OUsFFZqlOqzu0vx7zY3cIOhACYsV4ensuX6qeIaM6Pk=",
       "netstandard.pa5mbjs6mr.wasm": "sha256-r+Qu6UdaWsqkiwAC5o5/kuJtQ4pi1nb9Hwo9cJtDoxc=",
-      "CertificateManager.Client.xatjn9f1vr.wasm": "sha256-GYb2C67bFTsLisWIcciX23JggT7xEJ1k1x0AnFjTQtE="
+      "CertificateManager.Shared.fms2f1et3y.wasm": "sha256-mc/3LF2S82KZop6+DEw68/IjHFGmzZS1GUEZlfDcxFM=",
+      "CertificateManager.Client.t7z8tlgkk0.wasm": "sha256-SRUfYoCza1cfZ2YYpaMYvrhNBAFrWryExofXTm2ZrvA="
     },
     "pdb": {
-      "CertificateManager.Client.94mntzuoez.pdb": "sha256-uVhg9AyXHnUHUQboaodsnCYGOedLPOp5so5iP/WXZGo="
+      "CertificateManager.Shared.uo3hbbn5f0.pdb": "sha256-7tML91IHVCE+vs5dPyXAVX2Cw+gf01kW0SValou8YcA=",
+      "CertificateManager.Client.pe9bmu31qf.pdb": "sha256-YYLME20bu3hN/kebFHceLZ+6xWuD4mmZsVtz4ZFbpgg="
     }
   },
   "cacheBootResources": true,

@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using System.Text.Json;
+using CertificateManager.Shared.Models; // Added for shared Certificate model
 
 namespace CertificateManager.Client.Services;
 
@@ -47,6 +48,32 @@ public class CertificateService : ICertificateService
         {
             _logger.LogError(ex, "Error fetching test message from API");
             return $"Error: {ex.Message}";
+        }
+    }
+
+    public async Task<List<Certificate>?> GetAllCertificatesAsync()
+    {
+        _logger.LogInformation("Attempting to retrieve all certificates from API.");
+        try
+        {
+            var certificates = await _httpClient.GetFromJsonAsync<List<Certificate>>("api/certificates");
+            _logger.LogInformation("Successfully retrieved {Count} certificates from API.", certificates?.Count ?? 0);
+            return certificates;
+        }
+        catch (HttpRequestException httpEx)
+        {
+            _logger.LogError(httpEx, "HTTP request error while fetching all certificates.");
+            return null; // Or an empty list, depending on desired error handling for the UI
+        }
+        catch (JsonException jsonEx)
+        {
+            _logger.LogError(jsonEx, "JSON deserialization error while fetching all certificates.");
+            return null;
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An unexpected error occurred while fetching all certificates.");
+            return null;
         }
     }
 }

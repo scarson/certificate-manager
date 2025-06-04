@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CertificateManager.Server.Data;
 using Microsoft.EntityFrameworkCore;
-using CertificateManager.Server.Models; // Added for Certificate model
+using CertificateManager.Shared.Models; // Using shared models
 
 namespace CertificateManager.Server.Controllers;
 

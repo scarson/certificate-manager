@@ -571,6 +571,16 @@
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
         }
+      },
+      "CertificateManager.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/CertificateManager.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CertificateManager.Shared.dll": {}
+        }
       }
     },
     "net10.0/browser-wasm": {
@@ -1142,6 +1152,16 @@
         "build": {
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.props": {},
           "build/Microsoft.NET.Sdk.WebAssembly.Pack.targets": {}
+        }
+      },
+      "CertificateManager.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/CertificateManager.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CertificateManager.Shared.dll": {}
         }
       }
     }
@@ -2227,10 +2247,16 @@
         "tools/net472/Microsoft.NET.Sdk.WebAssembly.Pack.Tasks.dll",
         "tools/net472/Microsoft.NET.WebAssembly.Webcil.dll"
       ]
+    },
+    "CertificateManager.Shared/1.0.0": {
+      "type": "project",
+      "path": "../CertificateManager.Shared/CertificateManager.Shared.csproj",
+      "msbuildProject": "../CertificateManager.Shared/CertificateManager.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "CertificateManager.Shared >= 1.0.0",
       "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.0-preview.4.25258.110",
       "Microsoft.AspNetCore.Components.WebAssembly >= 10.0.0-preview.4.25258.110",
       "Microsoft.AspNetCore.Components.WebAssembly.Authentication >= 10.0.0-preview.4.25258.110",
@@ -2266,7 +2292,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Shared\\CertificateManager.Shared.csproj": {
+              "projectPath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Shared\\CertificateManager.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

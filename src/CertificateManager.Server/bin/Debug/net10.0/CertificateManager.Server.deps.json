@@ -9,6 +9,7 @@
       "CertificateManager.Server/1.0.0": {
         "dependencies": {
           "CertificateManager.Client": "1.0.0",
+          "CertificateManager.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.0-preview.4.25258.110",
           "Microsoft.AspNetCore.OpenApi": "10.0.0-preview.4.25258.110",
           "Microsoft.EntityFrameworkCore.Design": "10.0.0-preview.4.25258.110",
@@ -833,11 +834,20 @@
       },
       "CertificateManager.Client/1.0.0": {
         "dependencies": {
+          "CertificateManager.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0-preview.4.25258.110",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "10.0.0-preview.4.25258.110"
         },
         "runtime": {
           "CertificateManager.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "CertificateManager.Shared/1.0.0": {
+        "runtime": {
+          "CertificateManager.Shared.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1188,6 +1198,11 @@
       "hashPath": "system.windows.extensions.8.0.0.nupkg.sha512"
     },
     "CertificateManager.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CertificateManager.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

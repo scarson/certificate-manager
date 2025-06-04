@@ -173,3 +173,5 @@ C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\CertificateManager.Server.pdb
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\CertificateManager.Server.genruntimeconfig.cache
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\ref\CertificateManager.Server.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\bin\Debug\net10.0\CertificateManager.Shared.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\bin\Debug\net10.0\CertificateManager.Shared.pdb

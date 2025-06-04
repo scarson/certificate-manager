@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using CertificateManager.Server.Models;
+using CertificateManager.Shared.Models;
 
 namespace CertificateManager.Server.Data;
 

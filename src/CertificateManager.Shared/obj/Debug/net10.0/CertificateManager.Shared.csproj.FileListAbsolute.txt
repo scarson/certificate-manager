@@ -1,0 +1,12 @@
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\bin\Debug\net10.0\CertificateManager.Shared.deps.json
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\bin\Debug\net10.0\CertificateManager.Shared.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\bin\Debug\net10.0\CertificateManager.Shared.pdb
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.AssemblyInfoInputs.cache
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.AssemblyInfo.cs
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.sourcelink.json
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\refint\CertificateManager.Shared.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\CertificateManager.Shared.pdb
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Shared\obj\Debug\net10.0\ref\CertificateManager.Shared.dll

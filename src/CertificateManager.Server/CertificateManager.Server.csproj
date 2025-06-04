@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CertificateManager.Client\CertificateManager.Client.csproj" />
+    <ProjectReference Include="..\CertificateManager.Shared\CertificateManager.Shared.csproj" />
   </ItemGroup>
 
 </Project>
