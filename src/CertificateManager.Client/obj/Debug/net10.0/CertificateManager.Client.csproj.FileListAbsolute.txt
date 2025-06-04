@@ -1067,10 +1067,10 @@ C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\refint\CertificateManager.Client.dll
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\CertificateManager.Client.pdb
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\ref\CertificateManager.Client.dll
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.l91lu7e6ya.wasm
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.w8e9704bgs.pdb
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.l91lu7e6ya.wasm.gz
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.w8e9704bgs.pdb.gz
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\yyzmgbc0mu-{0}-l91lu7e6ya-l91lu7e6ya.gz
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\uux15pt5lp-{0}-w8e9704bgs-w8e9704bgs.gz
-C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\21pf8jtvlb-{0}-yqgakks0i1-yqgakks0i1.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.xatjn9f1vr.wasm
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.94mntzuoez.pdb
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.xatjn9f1vr.wasm.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\bin\Debug\net10.0\wwwroot\_framework\CertificateManager.Client.94mntzuoez.pdb.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\yyzmgbc0mu-{0}-xatjn9f1vr-xatjn9f1vr.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\uux15pt5lp-{0}-94mntzuoez-94mntzuoez.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Client\obj\Debug\net10.0\compressed\21pf8jtvlb-{0}-2uz8pmiv6v-2uz8pmiv6v.gz

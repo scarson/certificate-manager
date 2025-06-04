@@ -35,10 +35,9 @@ namespace CertificateManager.Server.Models // We'll keep this namespace for now,
         [StringLength(255)]
         public string SerialNumber { get; set; } = string.Empty;
 
-        [StringLength(1024)]
-        public string? PfxFilePath { get; set; } 
-
-        public string? PfxPasswordHash { get; set; } 
+        [Required]
+        [DataType(DataType.MultilineText)] // Hint for UI, not strictly for EF
+        public string CertificateData { get; set; } = string.Empty; // Stores the public X.509 certificate in PEM format
 
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
