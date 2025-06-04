@@ -1,0 +1,80 @@
+@page "/certificates"
+@using CertificateManager.Shared.Models
+@inject CertificateManager.Client.Services.ICertificateService CertificateService
+@inject ILogger<CertificateList> Logger
+
+<PageTitle>Certificates</PageTitle>
+
+<h1>Certificates</h1>
+
+@if (certificates == null && !loadFailed)
+{
+    <p><em>Loading certificates...</em></p>
+}
+else if (loadFailed)
+{
+    <p class="text-danger"><em>Failed to load certificates. Please try again later.</em></p>
+}
+else if (!certificates.Any())
+{
+    <p><em>No certificates found.</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Issuer</th>
+                <th>Serial Number</th>
+                <th>Valid From</th>
+                <th>Valid To</th>
+                <th>Thumbprint</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cert in certificates)
+            {
+                <tr>
+                    <td>@cert.Name</td>
+                    <td>@cert.Subject</td>
+                    <td>@cert.Issuer</td>
+                    <td>@cert.SerialNumber</td>
+                    <td>@cert.ValidFrom.ToShortDateString()</td>
+                    <td>@cert.ValidTo.ToShortDateString()</td>
+                    <td>@cert.Thumbprint</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<Certificate>? certificates;
+    private bool loadFailed = false;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Logger.LogInformation("CertificateList: Initializing component and fetching certificates.");
+        try
+        {
+            certificates = await CertificateService.GetAllCertificatesAsync();
+            if (certificates == null)
+            {
+                Logger.LogWarning("CertificateList: Received null list from service.");
+                loadFailed = true;
+            }
+            else
+            {
+                Logger.LogInformation("CertificateList: Successfully fetched {Count} certificates.", certificates.Count);
+            }
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "CertificateList: Error fetching certificates.");
+            loadFailed = true;
+            certificates = new List<Certificate>(); // Ensure certificates is not null for the UI
+        }
+    }
+}
