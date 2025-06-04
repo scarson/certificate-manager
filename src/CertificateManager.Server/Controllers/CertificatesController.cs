@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using CertificateManager.Server.Data;
+using Microsoft.EntityFrameworkCore;
+using CertificateManager.Server.Models; // Added for Certificate model
 
 namespace CertificateManager.Server.Controllers;
 
@@ -7,16 +10,31 @@ namespace CertificateManager.Server.Controllers;
 public class CertificatesController : ControllerBase
 {
     private readonly ILogger<CertificatesController> _logger;
+    private readonly ApplicationDbContext _context;
 
-    public CertificatesController(ILogger<CertificatesController> logger)
+    public CertificatesController(ILogger<CertificatesController> logger, ApplicationDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> GetAllCertificatesAsync()
     {
-        return Ok(new { Message = "Certificates API is working!" });
+        _logger.LogInformation("Attempting to retrieve all certificates.");
+        try
+        {
+            var certificates = await _context.Certificates
+                                             .Include(c => c.SubjectAlternativeNames)
+                                             .ToListAsync();
+            _logger.LogInformation($"Successfully retrieved {certificates.Count} certificates.");
+            return Ok(certificates);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error retrieving certificates from database.");
+            return StatusCode(500, "Internal server error while retrieving certificates.");
+        }
     }
 
     [HttpGet("test")]
