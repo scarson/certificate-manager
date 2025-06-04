@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hgi3rNNJFMM=",
+  "dgSpecHash": "1DHEmzmnSDc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Client\\CertificateManager.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Sam\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\blazor.bootstrap.3.3.1.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.app.internal.assets.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.authorization\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.authorization.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.10.0.0-preview.4.25258.110.nupkg.sha512",

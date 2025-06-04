@@ -1,40 +1,75 @@
 @inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inject NavigationManager Navigation
 
-    <main>
-        <div class="top-row px-4 d-flex justify-content-between">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-            <AuthorizeView>
-                <Authorized>
-                    <a href="#" @onclick="BeginLogOut">Log out (@context.User.Identity?.Name)</a>
-                </Authorized>
-                <NotAuthorized>
-                    <a href="login?returnUrl=/">Log in</a>
-                    <a href="register?returnUrl=/">Register</a>
-                </NotAuthorized>
-            </AuthorizeView>
+<BlazorBootstrapLayout StickyHeader="true">
+    <HeaderSection>
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <span class="navbar-brand ps-3 ps-lg-2">Certificate Manager</span>
+                <div class="d-flex align-items-center">
+                    <ThemeSwitcher Class="ps-3 ps-lg-2" Position="DropdownMenuPosition.End" />
+                    <AuthorizeView>
+                        <Authorized>
+                            <span class="text-light me-2 ms-2">@context.User.Identity?.Name</span>
+                            <button class="btn btn-link text-light" @onclick="BeginLogOut">Log out</button>
+                        </Authorized>
+                        <NotAuthorized>
+                            <a href="login?returnUrl=/" class="btn btn-link text-light ms-2">Log in</a>
+                            <a href="register?returnUrl=/" class="btn btn-link text-light">Register</a>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </div>
+            </div>
         </div>
+    </HeaderSection>
 
-        <article class="content px-4">
+    <SidebarSection>
+        <Sidebar2 Href="/"
+                  ImageSrc="/favicon.png" 
+                  Title="Certificate Mgr"
+                  DataProvider="Sidebar2DataProvider"
+                  WidthUnit="Unit.Px" />
+    </SidebarSection>
+
+    <ContentSection>
+        <div class="content px-4 py-2">
             @Body
-        </article>
-    </main>
-</div>
+        </div>
+    </ContentSection>
+
+    <FooterSection>
+        <div class="container-fluid text-center py-2">
+            <small>Certificate Manager &copy; @DateTime.Now.Year</small>
+        </div>
+    </FooterSection>
+</BlazorBootstrapLayout>
 
 @code {
-    [Inject] NavigationManager Navigation { get; set; } = default!;
+    private IEnumerable<NavItem> navItems = default!;
 
-    private void BeginLogOut(MouseEventArgs args)
+    private async Task<Sidebar2DataProviderResult> Sidebar2DataProvider(Sidebar2DataProviderRequest request)
     {
-        // For Identity Endpoints, logout is typically a POST to /logout.
-        // We can navigate to a page that handles this POST, or if /logout supports GET for initiating logout.
-        // A common pattern is to navigate to a page that then submits a form to POST to /logout.
-        // Or, if the /logout endpoint is configured to accept GET for initiating logout (less secure for direct GET but common for simple links), that can be used.
-        // For now, let's assume a GET to /logout is sufficient to trigger the server-side logout process.
-        // The server should then clear the cookie and redirect.
-        Navigation.NavigateTo("logout", forceLoad: true); 
+        if (navItems is null)
+            navItems = GetNavItems();
+
+        return await Task.FromResult(request.ApplyTo(navItems));
+    }
+
+    private IEnumerable<NavItem> GetNavItems()
+    {
+        navItems = new List<NavItem>
+        {
+            new NavItem { Id = "1", Href = "/", IconName = IconName.HouseDoorFill, Text = "Home", Match = NavLinkMatch.All },
+            new NavItem { Id = "2", Href = "counter", IconName = IconName.PlusSquareFill, Text = "Counter" },
+            new NavItem { Id = "3", Href = "weather", IconName = IconName.CloudSunFill, Text = "Weather" }, 
+            new NavItem { Id = "4", Href = "api-test", IconName = IconName.PlugFill, Text = "API Test" }, 
+            new NavItem { Id = "5", Href = "certificates", IconName = IconName.FileEarmarkTextFill, Text = "Certificates" } 
+        };
+        return navItems;
+    }
+
+    private void BeginLogOut()
+    {
+        Navigation.NavigateTo("logout", forceLoad: true);
     }
 }

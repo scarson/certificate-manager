@@ -24,6 +24,9 @@ builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddScoped<AuthenticationStateProvider, PersistentAuthenticationStateProvider>();
 // CookieHandler is now created via a factory for HttpClient
 
+// Register Blazor Bootstrap services
+builder.Services.AddBlazorBootstrap();
+
 // Register services
 builder.Services.AddScoped<ICertificateService, CertificateService>();
 

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Qb3i5JQ15P0=",
+  "dgSpecHash": "yac7K8DdAco=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Server\\CertificateManager.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Sam\\.nuget\\packages\\blazor.bootstrap\\3.3.1\\blazor.bootstrap.3.3.1.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.webassembly.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.webassembly.authentication.10.0.0-preview.4.25258.110.nupkg.sha512",

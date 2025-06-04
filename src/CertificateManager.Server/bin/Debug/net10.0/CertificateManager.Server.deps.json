@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v10.0": {
       "CertificateManager.Server/1.0.0": {
         "dependencies": {
+          "Blazor.Bootstrap": "3.3.1",
           "CertificateManager.Client": "1.0.0",
           "CertificateManager.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly.Server": "10.0.0-preview.4.25258.110",
@@ -19,6 +20,14 @@
         },
         "runtime": {
           "CertificateManager.Server.dll": {}
+        }
+      },
+      "Blazor.Bootstrap/3.3.1": {
+        "runtime": {
+          "lib/net9.0/BlazorBootstrap.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
         }
       },
       "Humanizer.Core/2.14.1": {
@@ -855,6 +864,7 @@
       },
       "CertificateManager.Client/1.0.0": {
         "dependencies": {
+          "Blazor.Bootstrap": "3.3.1",
           "CertificateManager.Shared": "1.0.0",
           "Microsoft.AspNetCore.Components.WebAssembly": "10.0.0-preview.4.25258.110",
           "Microsoft.AspNetCore.Components.WebAssembly.Authentication": "10.0.0-preview.4.25258.110"
@@ -881,6 +891,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Blazor.Bootstrap/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YJUyRsTYXr2SbDugC6zWSr2dz2hPK+8BYdigZ6oI0ERkFWkebzxMsDlF3eiomqBnVuG/PBB5KUfgw4Vp2LBCHA==",
+      "path": "blazor.bootstrap/3.3.1",
+      "hashPath": "blazor.bootstrap.3.3.1.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

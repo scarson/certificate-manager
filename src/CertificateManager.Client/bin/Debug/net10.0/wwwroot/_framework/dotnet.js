@@ -4,8 +4,9 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "CertificateManager.Client",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-RLW0Rnl5YLc5JMSX4tUIsMQujsMkyL3oGPG0naJWx38=",
+    "hash": "sha256-K8xH+mvu9xXQA9555CsJ5F/uSC7vy1KSGF9E+zKQ624=",
     "fingerprinting": {
+      "BlazorBootstrap.8ia4ukhb4c.wasm": "BlazorBootstrap.wasm",
       "Microsoft.AspNetCore.Authorization.xzblanle4u.wasm": "Microsoft.AspNetCore.Authorization.wasm",
       "Microsoft.AspNetCore.Components.yl5qce0m75.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Authorization.thha54ux9j.wasm": "Microsoft.AspNetCore.Components.Authorization.wasm",
@@ -211,10 +212,10 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "icudt_CJK.tjcz0u77k5.dat": "icudt_CJK.dat",
       "icudt_EFIGS.tptq2av103.dat": "icudt_EFIGS.dat",
       "icudt_no_CJK.lfu7j35m59.dat": "icudt_no_CJK.dat",
-      "CertificateManager.Shared.zhjj872kko.wasm": "CertificateManager.Shared.wasm",
-      "CertificateManager.Shared.3esdawewlo.pdb": "CertificateManager.Shared.pdb",
-      "CertificateManager.Client.2qw83c3vif.wasm": "CertificateManager.Client.wasm",
-      "CertificateManager.Client.3iwlrw5y4r.pdb": "CertificateManager.Client.pdb"
+      "CertificateManager.Shared.dfgmvk8bzn.wasm": "CertificateManager.Shared.wasm",
+      "CertificateManager.Shared.ysfybdvenv.pdb": "CertificateManager.Shared.pdb",
+      "CertificateManager.Client.ypoz60ua1a.wasm": "CertificateManager.Client.wasm",
+      "CertificateManager.Client.hnjquwm1nf.pdb": "CertificateManager.Client.pdb"
     },
     "jsModuleNative": {
       "dotnet.native.ag7edw449v.js": "sha256-xvVp/fZ4Y6bUzf5qhusfIdl1iBnAHjDV8xQ/ELYPXMs="
@@ -235,6 +236,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "System.Private.CoreLib.5yilb8a85v.wasm": "sha256-0wGIVCXH6GiTnPX4jQg+jax0Zz3wr/KJHQ/ZRG7o5u8="
     },
     "assembly": {
+      "BlazorBootstrap.8ia4ukhb4c.wasm": "sha256-MIwpz+S9i8sZvkJIsjB5JXII2Y7wGr+D3glSOxjbeyw=",
       "Microsoft.AspNetCore.Authorization.xzblanle4u.wasm": "sha256-/QUEt3didQtNvRB2rwtOztcYr0IvZ6JFtJOxhqVljLk=",
       "Microsoft.AspNetCore.Components.yl5qce0m75.wasm": "sha256-Gl3w7Mz6eaW3XAPUp3F29uvJ3cuSI0Tcd9BJk7X1ojw=",
       "Microsoft.AspNetCore.Components.Authorization.thha54ux9j.wasm": "sha256-77NeSW4aZ6/gX4XdRQUMjIlW3hegUdJumD5bwqKjZ2E=",
@@ -432,12 +434,12 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       "WindowsBase.x8kacodv3x.wasm": "sha256-AQFfd/tAEfdj9Zda1OnOLMOi8x3xF3D0DL3fmA9FeP4=",
       "mscorlib.vqgsl7wzlm.wasm": "sha256-OUsFFZqlOqzu0vx7zY3cIOhACYsV4ensuX6qeIaM6Pk=",
       "netstandard.pa5mbjs6mr.wasm": "sha256-r+Qu6UdaWsqkiwAC5o5/kuJtQ4pi1nb9Hwo9cJtDoxc=",
-      "CertificateManager.Shared.zhjj872kko.wasm": "sha256-iXLrEZeN2MKNQIEYag4gnKpb8yvLjM1+KxZIn1kupao=",
-      "CertificateManager.Client.2qw83c3vif.wasm": "sha256-ViWYVx3C+xmYgSoWQUcuRd+C9zuO+NsFsTlXnH4hX5g="
+      "CertificateManager.Shared.dfgmvk8bzn.wasm": "sha256-qYvTF/Xl7aB23XGzF+h0vtN8XlEmIRfbnSq2lyXA938=",
+      "CertificateManager.Client.ypoz60ua1a.wasm": "sha256-5o2OOEHimu5CtmRIsCIwrCx5aG6Xf43CvhW8NM5IXno="
     },
     "pdb": {
-      "CertificateManager.Shared.3esdawewlo.pdb": "sha256-+3puegBFljw6lMXYEYZw9wdMr7ZeIlIpURP8r+O4//g=",
-      "CertificateManager.Client.3iwlrw5y4r.pdb": "sha256-y+KXD9AN7+9NhuEvf9r0/5LkTIJe7fxkP3yU5AJDK7U="
+      "CertificateManager.Shared.ysfybdvenv.pdb": "sha256-gjOqUD6Kre9Q/6zUpTDyUqLS10lufJ4mjIf7f10crAw=",
+      "CertificateManager.Client.hnjquwm1nf.pdb": "sha256-/eMENWH3/iAaVBNxdhjBZCdXlQAtoTqYShlQ0v+6t6Q="
     }
   },
   "cacheBootResources": true,

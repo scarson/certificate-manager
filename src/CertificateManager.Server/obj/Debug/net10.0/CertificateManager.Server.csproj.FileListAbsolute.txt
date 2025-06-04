@@ -239,3 +239,13 @@ C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\nezrqnk58p-{0}-muycvpuwrr-muycvpuwrr.gz
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\v0zgfp0y55-{0}-87fc7y1x7t-87fc7y1x7t.gz
 C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\yfc7ypekbg-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\bin\Debug\net10.0\BlazorBootstrap.dll
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\yxfdm33bor-{0}-63oqyoiiv4-63oqyoiiv4.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\refgsao5tb-{0}-5vmds449nb-5vmds449nb.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\d5o4a4wkq9-{0}-ct0ej5e0q0-ct0ej5e0q0.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\sismm8xg1l-{0}-ezlxc6gzv3-ezlxc6gzv3.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\q8v6i1uv3e-{0}-pisakkcwob-pisakkcwob.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\36w3eu0hkb-{0}-j8zp7bt7w3-j8zp7bt7w3.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\mfzx4sb2rv-{0}-79hai7knhw-79hai7knhw.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\eojifsclv0-{0}-7t9tbfaemk-7t9tbfaemk.gz
+C:\Users\Sam\OneDrive\Documents\Code\certificate-manager\src\CertificateManager.Server\obj\Debug\net10.0\compressed\9kasc1zjkl-{0}-2f7rf8k9qo-2f7rf8k9qo.gz
