@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using CertificateManager.Server.Models;
 
 namespace CertificateManager.Server.Data;
 
@@ -8,6 +9,9 @@ public class ApplicationDbContext : DbContext
         : base(options)
     {
     }
+
+    public DbSet<Certificate> Certificates { get; set; } = null!;
+    public DbSet<SubjectAlternativeName> SubjectAlternativeNames { get; set; } = null!;
 
     // DbSet properties will be added here
 
