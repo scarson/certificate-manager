@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBpVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Sam/OneDrive/Documents/Code/certificate-manager/src/CertificateManager.Client/Pages/CertificateList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2VydGlmaWNhdGVMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Sam/OneDrive/Documents/Code/certificate-manager/src/CertificateManager.Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
