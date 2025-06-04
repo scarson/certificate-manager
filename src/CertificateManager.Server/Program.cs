@@ -1,4 +1,6 @@
 using CertificateManager.Server.Data;
+using CertificateManager.Server.Models; // For ApplicationUser
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
+
+// Add ASP.NET Core Identity & Identity Endpoints
+builder.Services.AddAuthorization(); // Ensure authorization services are registered
+builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
 
 // Add CORS policy for Blazor client
 var allowedOrigins = builder.Configuration["AllowedOrigins"]?.Split(';', StringSplitOptions.RemoveEmptyEntries) 
@@ -57,9 +64,15 @@ app.UseRouting();
 
 app.UseCors("AllowBlazorClient");
 
+app.UseAuthentication(); // Must be before UseAuthorization
+app.UseAuthorization();
+
 app.MapRazorPages();
 app.MapControllers();
 app.MapFallbackToFile("index.html");
+
+// Map Identity API endpoints
+app.MapIdentityApi<ApplicationUser>();
 
 // Initialize the database
 using (var scope = app.Services.CreateScope())

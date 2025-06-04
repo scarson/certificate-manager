@@ -1,12 +1,21 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
 
     <main>
-        <div class="top-row px-4">
+        <div class="top-row px-4 d-flex justify-content-between">
             <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+            <AuthorizeView>
+                <Authorized>
+                    <a href="#" @onclick="BeginLogOut">Log out (@context.User.Identity?.Name)</a>
+                </Authorized>
+                <NotAuthorized>
+                    <a href="login?returnUrl=/">Log in</a>
+                    <a href="register?returnUrl=/">Register</a>
+                </NotAuthorized>
+            </AuthorizeView>
         </div>
 
         <article class="content px-4">
@@ -14,3 +23,18 @@
         </article>
     </main>
 </div>
+
+@code {
+    [Inject] NavigationManager Navigation { get; set; } = default!;
+
+    private void BeginLogOut(MouseEventArgs args)
+    {
+        // For Identity Endpoints, logout is typically a POST to /logout.
+        // We can navigate to a page that handles this POST, or if /logout supports GET for initiating logout.
+        // A common pattern is to navigate to a page that then submits a form to POST to /logout.
+        // Or, if the /logout endpoint is configured to accept GET for initiating logout (less secure for direct GET but common for simple links), that can be used.
+        // For now, let's assume a GET to /logout is sufficient to trigger the server-side logout process.
+        // The server should then clear the cookie and redirect.
+        Navigation.NavigateTo("logout", forceLoad: true); 
+    }
+}

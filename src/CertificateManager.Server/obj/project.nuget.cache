@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QagzU4Sx8M0=",
+  "dgSpecHash": "Qb3i5JQ15P0=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sam\\OneDrive\\Documents\\Code\\certificate-manager\\src\\CertificateManager.Server\\CertificateManager.Server.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.webassembly.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.webassembly.authentication.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.server\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.components.webassembly.server.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.identity.entityframeworkcore.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.identity.ui.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0-preview.4.25258.110\\microsoft.aspnetcore.openapi.10.0.0-preview.4.25258.110.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.build\\17.7.2\\microsoft.build.17.7.2.nupkg.sha512",
     "C:\\Users\\Sam\\.nuget\\packages\\microsoft.build.framework\\17.13.9\\microsoft.build.framework.17.13.9.nupkg.sha512",

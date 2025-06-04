@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CertificateManager.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+10b8b841c7bc456945d128ace178b6178dec05bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f27f75b1d91b9b342c584cb593f79284fba4ec7a")]
 [assembly: System.Reflection.AssemblyProductAttribute("CertificateManager.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CertificateManager.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

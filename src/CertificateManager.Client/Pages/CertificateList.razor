@@ -1,23 +1,37 @@
 @page "/certificates"
 @using CertificateManager.Shared.Models
-@inject CertificateManager.Client.Services.ICertificateService CertificateService
+@using Microsoft.Extensions.Logging
+@inject ICertificateService CertificateService
 @inject ILogger<CertificateList> Logger
 
 <PageTitle>Certificates</PageTitle>
 
 <h1>Certificates</h1>
 
-@if (certificates == null && !loadFailed)
+@if (certificates == null)
 {
-    <p><em>Loading certificates...</em></p>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <span class="ms-2">Loading certificates...</span>
+    </div>
 }
 else if (loadFailed)
 {
-    <p class="text-danger"><em>Failed to load certificates. Please try again later.</em></p>
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Error loading certificates</h4>
+        <p>Failed to load certificates. Please try again later.</p>
+        <button class="btn btn-primary btn-sm" @onclick="LoadCertificates">
+            <i class="bi bi-arrow-clockwise"></i> Retry
+        </button>
+    </div>
 }
 else if (!certificates.Any())
 {
-    <p><em>No certificates found.</em></p>
+    <div class="alert alert-info" role="alert">
+        <i class="bi bi-info-circle me-2"></i> No certificates found.
+    </div>
 }
 else
 {
@@ -52,28 +66,34 @@ else
 
 @code {
     private List<Certificate>? certificates;
-    private bool loadFailed = false;
+    private bool loadFailed;
 
     protected override async Task OnInitializedAsync()
     {
-        Logger.LogInformation("CertificateList: Initializing component and fetching certificates.");
+        await LoadCertificates();
+    }
+
+    private async Task LoadCertificates()
+    {
         try
         {
-            certificates = await CertificateService.GetAllCertificatesAsync();
-            if (certificates == null)
+            loadFailed = false;
+            certificates = null;
+            await InvokeAsync(StateHasChanged);
+
+            var result = await CertificateService.GetAllCertificatesAsync();
+            certificates = result ?? new List<Certificate>();
+            
+            if (loadFailed) // If previous attempt failed but this one succeeded
             {
-                Logger.LogWarning("CertificateList: Received null list from service.");
-                loadFailed = true;
-            }
-            else
-            {
-                Logger.LogInformation("CertificateList: Successfully fetched {Count} certificates.", certificates.Count);
+                loadFailed = false;
             }
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "CertificateList: Error fetching certificates.");
             loadFailed = true;
+            Logger.LogError(ex, "Error loading certificates");
+            certificates = new List<Certificate>(); // Ensure we have an empty list even on error
             certificates = new List<Certificate>(); // Ensure certificates is not null for the UI
         }
     }

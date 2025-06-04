@@ -1,6 +1,8 @@
 using System.Net.Http.Json;
 using System.Text.Json;
-using CertificateManager.Shared.Models; // Added for shared Certificate model
+using CertificateManager.Shared.Models;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.WebAssembly.Http;
 
 namespace CertificateManager.Client.Services;
 
@@ -8,18 +10,24 @@ public class CertificateService : ICertificateService
 {
     private readonly HttpClient _httpClient;
     private readonly ILogger<CertificateService> _logger;
+    private readonly AuthenticationStateProvider _authStateProvider;
 
-    public CertificateService(HttpClient httpClient, ILogger<CertificateService> logger)
+    public CertificateService(HttpClient httpClient, 
+                           ILogger<CertificateService> logger,
+                           AuthenticationStateProvider authStateProvider)
     {
         _httpClient = httpClient;
         _logger = logger;
+        _authStateProvider = authStateProvider;
     }
 
     public async Task<string> GetTestMessageAsync()
     {
         try
         {
-            var response = await _httpClient.GetAsync("api/certificates/test");
+            var request = new HttpRequestMessage(HttpMethod.Get, "api/certificates/test");
+            request.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+            var response = await _httpClient.SendAsync(request);
             
             if (response.IsSuccessStatusCode)
             {
@@ -54,26 +62,49 @@ public class CertificateService : ICertificateService
     public async Task<List<Certificate>?> GetAllCertificatesAsync()
     {
         _logger.LogInformation("Attempting to retrieve all certificates from API.");
+        
         try
         {
-            var certificates = await _httpClient.GetFromJsonAsync<List<Certificate>>("api/certificates");
-            _logger.LogInformation("Successfully retrieved {Count} certificates from API.", certificates?.Count ?? 0);
-            return certificates;
+            // Create a new request
+            var request = new HttpRequestMessage(HttpMethod.Get, "api/certificates");
+            
+            // Add authorization if user is authenticated
+            var authState = await _authStateProvider.GetAuthenticationStateAsync();
+            if (authState.User.Identity?.IsAuthenticated == true)
+            {
+                request.SetBrowserRequestCredentials(BrowserRequestCredentials.Include);
+            }
+            
+            // Send the request
+            var response = await _httpClient.SendAsync(request);
+            
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                _logger.LogInformation("Successfully retrieved certificates from API.");
+                return JsonSerializer.Deserialize<List<Certificate>>(content, 
+                    new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            }
+            else
+            {
+                _logger.LogError("Failed to retrieve certificates. Status code: {StatusCode}", response.StatusCode);
+                return new List<Certificate>(); // Return empty list instead of null
+            }
         }
         catch (HttpRequestException httpEx)
         {
             _logger.LogError(httpEx, "HTTP request error while fetching all certificates.");
-            return null; // Or an empty list, depending on desired error handling for the UI
+            return new List<Certificate>(); // Return empty list instead of null
         }
         catch (JsonException jsonEx)
         {
             _logger.LogError(jsonEx, "JSON deserialization error while fetching all certificates.");
-            return null;
+            return new List<Certificate>();
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "An unexpected error occurred while fetching all certificates.");
-            return null;
+            return new List<Certificate>();
         }
     }
 }
